@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise MealDB</title>
+
+    <style>
+        #titleName {
+            background-image: linear-gradient(black, #ffa5b9);
+            margin: auto;
+            justify-content: center;
+            padding: 30px;
+            color: white;
+            /* opacity: 50%; */
+            text-align: center;
+            font-weight: 700;
+            font-size: 55px;
+        }
+
+        #inputSearch {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        #input-text {
+            width: 50%;
+            height: 30px;
+            border: 2px solid hotpink;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #searchBtn {
+            background-color: hotpink;
+            border: 2px solid hotpink;
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 25px;
+            height: 40px;
+            padding-right: 20px;
+            cursor: pointer;
+            margin-left: 3px;
+        }
+
+        #meals {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            margin-left: 50px;
+            justify-content: center;
+
+        }
+
+        .singlemeal {
+            background-color: white;
+            width: 300px;
+            border: 2px solid hotpink;
+            border-radius: 10px;
+            text-align: center;
+            color: black;
+        }
+
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="titleName">Meal Filendo</h1>
+    <div id="inputSearch">
+        <input id="input-text" type="text" placeholder="Search your favorite food">
+        <button id="searchBtn" onclick="Search()">Search</button>
+    </div>
+    <!-- <section id="searchResult"></section> -->
+    <section id="meals"></section>
+    <script src="meal.js"></script>
+</body>
+
+</html>
