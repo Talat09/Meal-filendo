@@ -22,10 +22,17 @@ const displayMeals = (meals) => {
     })
 }
 
+//add spinner function
+const toggleSpinner = displayStyle => {
+    document.getElementById('spinner').style.display = displayStyle;
+}
+//search data load
 const Search = () => {
 
     const inputText = document.getElementById('input-text');
     const searchText = inputText.value;
+    //show spninner
+    toggleSpinner('block');
     inputText.value = '';
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
     fetch(url)
@@ -46,5 +53,6 @@ const display = (meals) => {
         `;
         container.appendChild(searchdiv)
     })
+    toggleSpinner('none')
 
 }
