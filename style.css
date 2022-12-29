@@ -120,6 +120,11 @@ body {
     #meals {
         margin-left: 100px;
     }
+
+    .notFound img {
+        width: 1200px;
+        margin-right: 10px;
+    }
 }
 
 /* responsive for mobile */
